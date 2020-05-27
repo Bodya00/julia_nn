@@ -1,0 +1,24 @@
+<form action="/configure_nn" method="POST">
+    <h3>Choose you network configuration</h3>
+    <label for="lr">Learning rate:</label>
+    <input name="lr" type="number" min="0.000001" max="1.0" step="0.0000001" value="0.003" required/>
+    <br/>
+    <label for="loss">Loss function:</label>
+    <select name="loss" required>
+        <option value="BinaryCrossentropy">BinaryCrossentropy</option>
+        <option value="MeanSquaredError">MeanSquaredError</option>
+    </select>
+    <br/>
+    <label for="batch_size">Batch size:</label>
+    <input type="number" name="batch_size" min="1" max="1000" value="1" required/>
+    <br/>
+    <label for="iterations">Iteration count:</label>
+    <input type="number" name="iterations" min="1" max="100000" value="1000" required/>
+    <div id="layers_fieldset">
+    </div>
+    <input type="button" value="Add new layer" id="add_new_layer"/>
+    <input type="button" value="Remove last layer" id="remove_last_layer" style="visibility:hidden;"/>
+    <br>
+    <input type="submit" value="Start training" id="all_submit"/>
+</form>
+<script src="/js/custom/nn_configurator.js" defer></script>

@@ -1,0 +1,10 @@
+<h1>Please choose CSV files:</h1>
+<form method="POST" enctype="multipart/form-data">
+  <label for="train_file"> For training: </label>
+  <input type="file" name="train" accept=".csv" id="train_file" required/>
+  <br/>
+  <label for="prediction_file"> For prediction: </label>
+  <input type="file" name="pred" accept=".csv" id="prediction_file" required/>
+  <br/>
+  <input type="submit" value="Submit" />
+</form>
