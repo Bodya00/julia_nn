@@ -1,10 +1,28 @@
-<h1>Please choose CSV files:</h1>
-<form method="POST" enctype="multipart/form-data">
-  <label for="train_file"> For training: </label>
-  <input type="file" name="train" accept=".csv" id="train_file" required/>
-  <br/>
-  <label for="prediction_file"> For prediction: </label>
-  <input type="file" name="pred" accept=".csv" id="prediction_file" required/>
-  <br/>
-  <input type="submit" value="Submit" />
-</form>
+<html>
+<head>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.5.0/dist/css/uikit.min.css"/>
+
+    <!-- UIkit JS -->
+</head>
+<body class="uk-width-1-1">
+<div class="uk-width-1-1 uk-flex uk-flex-column uk-flex-middle uk-margin-large-top">
+    <div>
+        <h3 class="uk-h3 uk-text-primary">Please choose CSV files:</h3>
+    </div>
+    <div class="uk-margin-top">
+        <form method="POST" enctype="multipart/form-data" class="uk-flex uk-flex-column">
+            <div>
+                <label for="train_file"> Select for training: </label>
+                <input class="uk-upload" type="file" name="train" accept=".csv" id="train_file" required/>
+            </div>
+            <div class="uk-margin-small-top">
+                <label for="prediction_file"> For prediction: </label>
+                <input type="file" name="pred" accept=".csv" id="prediction_file" required/>
+            </div>
+            <div class="uk-margin-medium-top uk-flex uk-flex-center">
+                <input class="uk-button uk-button-primary uk-button-small" type="submit" value="Submit"/>
+            </div>
+        </form>
+    </div>
+</div>
+</body>
